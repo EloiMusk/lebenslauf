@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "sprachen": [
+        {
+          "Deutsch": 100
+        },
+        {
+          "Englisch": 75
+        },
+        {
+          "Französisch": 40
+        },
+        {
+          "Italienisch": 30
+        },
+        {
+          "Latein": 10
+        }
+      ]
+    }
+  ]
+}
