@@ -35,7 +35,11 @@ interface skill {
 })
 export default class Skills extends Vue {
     private chartData: Array<chartData> = [];
-    private categories: category[] = skills.categories;
+    private categories: category[] = skills.skills.map(category => {
+        return { name: category.category, skills: Object.values(category.values).map( value => {
+            return { name: value.name, value: value.value };
+            }) };
+    });
 
     mounted() {
         this.mapChartData();
