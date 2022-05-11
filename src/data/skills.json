@@ -1,32 +1,29 @@
-{
-  "skills": [
-    {
-      "category": "Sprachen",
-      "values": [
-        {
-          "Deutsch": 100
-        },
-        {
-          "Englisch": 75
-        },
-        {
-          "Französisch": 40
-        },
-        {
-          "Italienisch": 30
-        },
-        {
-          "Latein": 10
-        }
-      ]
-    },
-    {
-      "category": "Programmierung",
-      "values": [
-        {
-          "Java": 80
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Sprachen",
+    "skills": [
+      {
+        "name": "Deutsch",
+        "level": 100
+      },
+      {
+        "name": "Englisch",
+        "level": 80
+      }
+    ]
+  },
+  {
+    "name": "Programmierung",
+    "skills": [
+      {
+        "name": "Java",
+        "level": 90
+      },
+      {
+        "name": "C++",
+        "level": 0
+      }
+    ]
+  }
+]
+

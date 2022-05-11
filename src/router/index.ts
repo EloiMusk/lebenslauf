@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter, {RouteConfig} from 'vue-router'
-import Home from '../views/Home/Home.vue'
-import Skills from "../views/Skills/Skills.vue";
+import Home from '@/views/Home/Home.vue'
+import Skills from "@/views/Skills/Skills.vue";
 
 Vue.use(VueRouter)
 

@@ -1,5 +1,7 @@
 import {Component, Vue} from "vue-property-decorator";
 import skills from '@/data/skills.json';
+import Category from '@/models/Category';
+import VueApexCharts from "vue-apexcharts";
 
 interface chartData {
     series: [{
@@ -20,28 +22,16 @@ interface chartData {
     }
 }
 
-interface category {
-    name: string,
-    skills: skill[]
-}
-
-interface skill {
-    name: string,
-    value: number
-}
-
 @Component({
-    components: {}
+    components: {
+        apexchart: VueApexCharts
+    }
 })
 export default class Skills extends Vue {
     private chartData: Array<chartData> = [];
-    private categories: category[] = skills.skills.map(category => {
-        return { name: category.category, skills: Object.values(category.values).map( value => {
-            return { name: value.name, value: value.value };
-            }) };
-    });
+    private categories: Category[] = skills;
 
-    mounted() {
+    mounted(): void {
         this.mapChartData();
     }
 
@@ -50,7 +40,7 @@ export default class Skills extends Vue {
             return {
                 series: [{
                     name: category.name,
-                    data: category.skills.map(skill => skill.value)
+                    data: category.skills.map(skill => skill.level)
                 }],
                 chartOptions: {
                     chart: {
@@ -66,5 +56,7 @@ export default class Skills extends Vue {
                 }
             }
         });
+        console.log(JSON.stringify(this.categories));
+        console.log(this.chartData);
     }
 }
