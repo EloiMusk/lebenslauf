@@ -2,25 +2,7 @@ import {Component, Vue} from "vue-property-decorator";
 import skills from '@/data/skills.json';
 import Category from '@/models/Category';
 import VueApexCharts from "vue-apexcharts";
-
-interface chartData {
-    series: [{
-        name: string,
-        data: number[]
-    }],
-    chartOptions: {
-        chart: {
-            height: number,
-            type: string
-        },
-        title: {
-            text: string
-        },
-        xAxis: {
-            categories: string[]
-        }
-    }
-}
+import {ApexOptions} from "apexcharts";
 
 @Component({
     components: {
@@ -28,8 +10,10 @@ interface chartData {
     }
 })
 export default class Skills extends Vue {
-    private chartData: Array<chartData> = [];
+    private chartData: Array<{ series: ApexAxisChartSeries, chartOptions: ApexOptions }> = [];
     private categories: Category[] = skills;
+
+    private panel = 0;
 
     mounted(): void {
         this.mapChartData();
@@ -43,20 +27,76 @@ export default class Skills extends Vue {
                     data: category.skills.map(skill => skill.level)
                 }],
                 chartOptions: {
+                    theme: {
+                        mode: 'dark'
+                    },
                     chart: {
+                        toolbar: {
+                            show: false
+                        },
                         height: 350,
-                        type: 'radar'
+                        type: 'radar',
+                        dropShadow: {
+                            enabled: true,
+                            top: 0,
+                            left: 0,
+                            blur: 5,
+                            opacity: 0.8,
+                            color: '#000000'
+                        },
+                        background: 'transparent',
+                        animations: {
+                            enabled: true,
+                            easing: 'easeinout',
+                            speed: 500,
+                            animateGradually: {
+                                enabled: true,
+                                delay: 150
+                            },
+                            dynamicAnimation: {
+                                enabled: true,
+                                speed: 500
+                            }
+                        }
                     },
                     title: {
-                        text: category.name
+                        style: {
+                            fontSize: '20px'
+                        }
                     },
-                    xAxis: {
-                        categories: category.skills.map(skill => skill.name)
+                    labels: category.skills.map(skill => skill.name),
+                    colors: ['#F44336'],
+                    tooltip: {
+                        enabled: false
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        style: {
+                            colors: ['#F44336'],
+                            fontSize: '0.9em'
+                        }
+                    },
+                    yaxis: {
+                        max: 100,
+                        min: 0,
+                        labels: {
+                            style: {
+                                colors: '#F44336',
+                                fontSize: '0.9em'
+                            }
+                        }
+                    },
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '0.9em'
+                            }
+                        }
                     }
                 }
             }
         });
-        console.log(JSON.stringify(this.categories));
-        console.log(this.chartData);
     }
 }
+
+

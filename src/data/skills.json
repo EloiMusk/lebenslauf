@@ -9,19 +9,205 @@
       {
         "name": "Englisch",
         "level": 80
+      },
+      {
+        "name": "Französisch",
+        "level": 40
+      },
+      {
+        "name": "Italienisch",
+        "level": 30
+      },
+      {
+        "name": "Latein",
+        "level": 15
       }
     ]
   },
   {
-    "name": "Programmierung",
+    "name": "Office 365",
     "skills": [
       {
-        "name": "Java",
+        "name": "Word",
         "level": 90
       },
       {
-        "name": "C++",
-        "level": 0
+        "name": "PowerPoint",
+        "level": 80
+      },
+      {
+        "name": "Excel",
+        "level": 60
+      },
+      {
+        "name": "Outlook",
+        "level": 50
+      },
+      {
+        "name": "OneDrive",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "Webentwicklung (Frontend)",
+    "skills": [
+      {
+        "name": "HTML",
+        "level": 80
+      },
+      {
+        "name": "CSS",
+        "level": 60
+      },
+      {
+        "name": "JavaScript",
+        "level": 50
+      },
+      {
+        "name": "TypeScript",
+        "level": 60
+      },
+      {
+        "name": "Angular",
+        "level": 40
+      },
+      {
+        "name": "Vue",
+        "level": 60
+      },
+      {
+        "name": "PHP",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "Webentwicklung (Backend)",
+    "skills": [
+      {
+        "name": "Express.js",
+        "level": 40
+      },
+      {
+        "name": "Spring Boot",
+        "level": 50
+      },
+      {
+        "name": "Flask",
+        "level": 40
+      },
+      {
+        "name": "GraphQL",
+        "level": 30
+      },
+      {
+        "name": "MySQL",
+        "level": 50
+      },
+      {
+        "name": "GraphApi",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "Objektorientierte Programmierung",
+    "skills": [
+      {
+        "name": "Java",
+        "level": 70
+      },
+      {
+        "name": "Python",
+        "level": 50
+      },
+      {
+        "name": "PowerShell",
+        "level": 70
+      },
+      {
+        "name": "Typescript",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "Betriebssysteme",
+    "skills": [
+      {
+        "name": "Windows 10",
+        "level": 80
+      },
+      {
+        "name": "Linux",
+        "level": 80
+      },
+      {
+        "name": "MacOS",
+        "level": 20
+      },
+      {
+        "name": "Windows Server",
+        "level": 70
+      }
+    ]
+  },
+  {
+    "name": "Systemtechnik",
+    "skills": [
+      {
+        "name": "Hardware",
+        "level": 60
+      },
+      {
+        "name": "Netzwerk Planung",
+        "level": 70
+      },
+      {
+        "name": "Routing",
+        "level": 70
+      },
+      {
+        "name": "Firewall",
+        "level": 50
+      },
+      {
+        "name": "Active Directory",
+        "level": 60
+      },
+      {
+        "name": "DNS",
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "Cybersecurity (Red Team)",
+    "skills": [
+      {
+        "name": "Linux",
+        "level": 75
+      },
+      {
+        "name": "Web Exploitation",
+        "level": 60
+      },
+      {
+        "name": "Windows Exploitation",
+        "level": 23
+      },
+      {
+        "name": "Fundamentals",
+        "level": 100
+      },
+      {
+        "name": "Privilege Escalation",
+        "level": 30
+      },
+      {
+        "name": "Network Exploitation",
+        "level": 58
       }
     ]
   }
