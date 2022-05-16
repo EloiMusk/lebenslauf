@@ -18,5 +18,6 @@
   </v-container>
 </template>
 
-<script lang="ts" src="@/views/Skills/Skills.ts"/>
+<script lang="ts" src="@/views/Skills/Skills.ts">
+</script>
 

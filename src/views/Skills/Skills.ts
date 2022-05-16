@@ -1,12 +1,14 @@
-import {Component, Vue} from "vue-property-decorator";
+import {Vue} from "vue-property-decorator";
 import skills from '@/data/skills.json';
 import Category from '@/models/Category';
-import VueApexCharts from "vue-apexcharts";
 import {ApexOptions} from "apexcharts";
+import Component from "vue-class-component";
+import SkillChart from "@/components/skillChart/SkillChart";
+
 
 @Component({
     components: {
-        apexchart: VueApexCharts
+        skillChart: SkillChart
     }
 })
 export default class Skills extends Vue {
@@ -15,7 +17,7 @@ export default class Skills extends Vue {
 
     private panel = 0;
 
-    mounted(): void {
+    beforeMount(): void {
         this.mapChartData();
     }
 
@@ -34,7 +36,6 @@ export default class Skills extends Vue {
                         toolbar: {
                             show: false
                         },
-                        height: 350,
                         type: 'radar',
                         dropShadow: {
                             enabled: true,
@@ -48,7 +49,7 @@ export default class Skills extends Vue {
                         animations: {
                             enabled: true,
                             easing: 'easeinout',
-                            speed: 500,
+                            speed: 300,
                             animateGradually: {
                                 enabled: true,
                                 delay: 150
