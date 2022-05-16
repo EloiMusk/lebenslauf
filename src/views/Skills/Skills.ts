@@ -1,19 +1,71 @@
 import {Vue} from "vue-property-decorator";
 import skills from '@/data/skills.json';
 import Category from '@/models/Category';
-import {ApexOptions} from "apexcharts";
 import Component from "vue-class-component";
-import SkillChart from "@/components/skillChart/SkillChart";
+import {
+    Chart,
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip,
+    SubTitle
+} from 'chart.js';
+
+Chart.register(
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip,
+    SubTitle
+);
 
 
 @Component({
-    components: {
-        skillChart: SkillChart
-    }
+    components: {}
 })
 export default class Skills extends Vue {
-    private chartData: Array<{ series: ApexAxisChartSeries, chartOptions: ApexOptions }> = [];
+    private chartData: Array<any> = [];
     private categories: Category[] = skills;
+    private charts: Array<Chart> = [];
+    private headerCharts: Array<Chart> = [];
 
     private panel = 0;
 
@@ -21,83 +73,74 @@ export default class Skills extends Vue {
         this.mapChartData();
     }
 
+    mounted(): void {
+        console.log("Ref: ", this.$refs)
+        this.charts = this.chartData.map((data, i) => {
+            return new Chart(this.$refs.chart[i].getContext('2d'), data);
+        });
+    }
+
+    private getStyle(skill: number, collection: Array<number>, index: number) {
+        const colSum = collection.reduce((a, b) => a + b, 0);
+        const width = 100 / colSum * skill;
+        const background = 'hsl(' + 330 / collection.length * index + ',83.6%, 66%, 20%)';
+        return {
+            width: `${width}%`,
+            background: background
+        }
+    }
+
+    // private getSorted(collection: Array<number>){
+    //     return collection.sort((a, b) => a - b);
+    // }
+
+
     private mapChartData() {
         this.chartData = this.categories.map(category => {
             return {
-                series: [{
-                    name: category.name,
-                    data: category.skills.map(skill => skill.level)
-                }],
-                chartOptions: {
-                    theme: {
-                        mode: 'dark'
-                    },
-                    chart: {
-                        toolbar: {
-                            show: false
-                        },
-                        type: 'radar',
-                        dropShadow: {
-                            enabled: true,
-                            top: 0,
-                            left: 0,
-                            blur: 5,
-                            opacity: 0.8,
-                            color: '#000000'
-                        },
-                        background: 'transparent',
-                        animations: {
-                            enabled: true,
-                            easing: 'easeinout',
-                            speed: 300,
-                            animateGradually: {
-                                enabled: true,
-                                delay: 150
-                            },
-                            dynamicAnimation: {
-                                enabled: true,
-                                speed: 500
-                            }
-                        }
-                    },
-                    title: {
-                        style: {
-                            fontSize: '20px'
-                        }
-                    },
+                type: 'polarArea',
+                data: {
                     labels: category.skills.map(skill => skill.name),
-                    colors: ['#F44336'],
-                    tooltip: {
-                        enabled: false
-                    },
-                    dataLabels: {
-                        enabled: true,
-                        style: {
-                            colors: ['#F44336'],
-                            fontSize: '0.9em'
+                    datasets: [
+                        {
+                            label: category.name,
+                            data: category.skills.map(skill => skill.level),
+                            fill: true,
+                            backgroundColor: category.skills.map(
+                                (skill, i, a) => 'hsl(' + 330 / a.length * i + ',83.6%, 66%, 20%)'
+                            ),
+                            borderColor: category.skills.map(
+                                (skill, i, a) => 'hsl(' + 330 / a.length * i + ',100%, 66%)'
+                            ),
+                            pointBackgroundColor: 'rgb(54, 162, 235)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgb(54, 162, 235)'
                         }
-                    },
-                    yaxis: {
-                        max: 100,
-                        min: 0,
-                        labels: {
-                            style: {
-                                colors: '#F44336',
-                                fontSize: '0.9em'
-                            }
-                        }
-                    },
-                    xaxis: {
-                        labels: {
-                            style: {
-                                fontSize: '0.9em'
-                            }
-                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    transitions: {
+                        easing: 'easeInOutQuad'
                     }
-                }
-            }
-        });
+
+                },
+                scales: {
+                    yAxes: [{
+                        min: 0,
+                        max: 100,
+                    }]
+                },
+
+            label: category.name
+        }
     }
+
+);
 }
+}
+
 
 

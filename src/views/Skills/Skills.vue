@@ -5,13 +5,23 @@
           v-for="(chart, i) in chartData"
           :key="i"
       >
-        <v-expansion-panel-header>{{ chart.series[0].name }}</v-expansion-panel-header>
-        <v-expansion-panel-content>
-          <apexchart
-              v-bind:id="'chart' + i"
-              :options="chart.chartOptions"
-              :series="chart.series"
-             ></apexchart>
+        <v-expansion-panel-header>
+          {{ chart.label }}
+          <div class="d-flex d-table-row ml-3 mr-3" v-if="i !== panel">
+              <v-tooltip :key="t" v-for="(skill, t) in chart.data.datasets[0].data" bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <div v-bind="attrs"
+                  v-on="on"  :style="getStyle(skill, chart.data.datasets[0].data, t)" class="d-flex justify-center">
+                    <v-icon class="transparent--text">mdi-star</v-icon>
+                  </div>
+                </template>
+                <span>{{ chart.data.labels[t] }}</span>
+              </v-tooltip>
+
+          </div>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content :eager="true">
+          <canvas ref="chart" style="width: 50%"></canvas>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
