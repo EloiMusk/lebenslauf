@@ -27,7 +27,7 @@ import {
     Legend,
     Title,
     Tooltip,
-    SubTitle
+    SubTitle, ChartItem
 } from 'chart.js';
 
 Chart.register(
@@ -58,9 +58,7 @@ Chart.register(
 );
 
 
-@Component({
-    components: {}
-})
+@Component
 export default class Skills extends Vue {
     private chartData: Array<any> = [];
     private categories: Category[] = skills;
@@ -75,8 +73,9 @@ export default class Skills extends Vue {
 
     mounted(): void {
         console.log("Ref: ", this.$refs)
+        const el = this.$refs.chart as Array<any>;
         this.charts = this.chartData.map((data, i) => {
-            return new Chart(this.$refs.chart[i].getContext('2d'), data);
+            return new Chart(el[i].getContext('2d'), data);
         });
     }
 
@@ -97,49 +96,47 @@ export default class Skills extends Vue {
 
     private mapChartData() {
         this.chartData = this.categories.map(category => {
-            return {
-                type: 'polarArea',
-                data: {
-                    labels: category.skills.map(skill => skill.name),
-                    datasets: [
-                        {
-                            label: category.name,
-                            data: category.skills.map(skill => skill.level),
-                            fill: true,
-                            backgroundColor: category.skills.map(
-                                (skill, i, a) => 'hsl(' + 330 / a.length * i + ',83.6%, 66%, 20%)'
-                            ),
-                            borderColor: category.skills.map(
-                                (skill, i, a) => 'hsl(' + 330 / a.length * i + ',100%, 66%)'
-                            ),
-                            pointBackgroundColor: 'rgb(54, 162, 235)',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: 'rgb(54, 162, 235)'
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    transitions: {
-                        easing: 'easeInOutQuad'
-                    }
+                return {
+                    type: 'doughnut',
+                    data: {
+                        labels: category.skills.map(skill => skill.name),
+                        datasets: [
+                            {
+                                label: category.name,
+                                data: category.skills.map(skill => skill.level),
+                                fill: true,
+                                backgroundColor: category.skills.map(
+                                    (skill, i, a) => 'hsl(' + 330 / a.length * i + ',83.6%, 66%, 20%)'
+                                ),
+                                borderColor: category.skills.map(
+                                    (skill, i, a) => 'hsl(' + 330 / a.length * i + ',100%, 66%)'
+                                ),
+                                pointBackgroundColor: 'rgb(54, 162, 235)',
+                                pointBorderColor: '#fff',
+                                pointHoverBackgroundColor: '#fff',
+                                pointHoverBorderColor: 'rgb(54, 162, 235)'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        transitions: {
+                            easing: 'easeInOutQuad'
+                        },
+                    },
+                    scales: {
+                        yAxes: [{
+                            min: 0,
+                            max: 100,
+                        }]
+                    },
 
-                },
-                scales: {
-                    yAxes: [{
-                        min: 0,
-                        max: 100,
-                    }]
-                },
-
-            label: category.name
-        }
+                    label: category.name
+                }
+            }
+        );
     }
-
-);
-}
 }
 
 

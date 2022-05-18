@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card id="general" class="flex-row d-flex">
-      <v-img class="imageTumbnail" v-ripple contain src="@/assets/me.png" max-width="500"></v-img>
+      <v-img class="imageTumbnail" v-ripple contain src="@/assets/me.jpg" max-width="500"></v-img>
       <v-list class="ml-3" width="100%">
         <h1>Algemeine Informationen</h1>
         <v-list-item>

@@ -1,18 +1,15 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-      color="primary"
-      light
-      hide-on-scroll
+        app
+        hide-on-scroll
     >
-      <v-img
-          contain
-          src="@/assets/Logo512x512.png"
-          max-height="50"
-          max-width="50"
+      <v-icon
+          large
       >
-      </v-img>
+        $vuetify.icons.logo
+      </v-icon>
+
       <v-tabs centered>
         <v-tab to="/">Home</v-tab>
         <v-tab to="/skills">Skills</v-tab>
@@ -20,6 +17,12 @@
         <v-tab to="/referenzen">Referenzen</v-tab>
         <v-tab to="/kontakt">Kontakt</v-tab>
       </v-tabs>
+      <v-switch
+          v-model="$vuetify.theme.dark"
+          inset
+          prepend-icon="mdi-theme-light-dark"
+          label=""
+      ></v-switch>
     </v-app-bar>
     <v-main id="content">
       <router-view/>
@@ -31,10 +34,18 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
+  mounted() {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem('dark') !== 'false') {
+      this.$vuetify.theme.dark = true;
+      localStorage.setItem('dark', 'true');
+    }
+  },
+  updated() {
+    if (this.$vuetify.theme.dark) {
+      localStorage.setItem('dark', 'true');
+    }else{
+      localStorage.setItem('dark', 'false');
+    }
+  }
 });
 </script>

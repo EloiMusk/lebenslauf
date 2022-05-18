@@ -15,13 +15,13 @@
                     <v-icon class="transparent--text">mdi-star</v-icon>
                   </div>
                 </template>
-                <span>{{ chart.data.labels[t] }}</span>
+                <span>{{ chart.data.labels[t] }}: {{skill}}</span>
               </v-tooltip>
 
           </div>
         </v-expansion-panel-header>
         <v-expansion-panel-content :eager="true">
-          <canvas ref="chart" style="width: 50%"></canvas>
+          <canvas ref="chart"></canvas>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
