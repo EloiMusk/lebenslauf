@@ -2,7 +2,7 @@
   <v-container id="projects">
     <template>
       <v-timeline>
-        <v-timeline-item icon="mdi-penguin" v-for="n in 6" :key="n">
+        <v-timeline-item :icon="'mdi-'+project.icon" v-for="(project, i) in projects" :key="i">
           <v-card :loading="loading">
             <template slot="progress">
               <v-progress-linear
@@ -14,11 +14,11 @@
             <template>
               <v-parallax
                   dark
-                  height="250"
-                  src="@/assets/rhel.jpg"
+                  height="300"
+                  :src="require(`@/assets/${project.image}`)"
               ></v-parallax>
             </template>
-            <v-card-title>Cafe Badilico</v-card-title>
+            <v-card-title>{{ project.name }}</v-card-title>
             <v-card-text>
               <div>
                 <v-tooltip left>
@@ -29,7 +29,7 @@
                   </template>
                   <span>Projektanbieter/in</span>
                 </v-tooltip>
-                Max Muster
+                {{ project.pa }}
               </div>
               <div>
                 <v-tooltip left>
@@ -40,15 +40,16 @@
                   </template>
                   <span>Dauer</span>
                 </v-tooltip>
-                20.09.2019 - 30.09.2019
+                {{ project.duration }}
               </div>
-              <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.
+              <div id="description">
+               {{ project.description }}
               </div>
             </v-card-text>
             <v-divider class="mx-4"></v-divider>
             <v-card-title>Kompetenzen</v-card-title>
             <v-card-text>
-              <v-chip v-for="n in 4" :key="n" class="mr-1">{{ n }}</v-chip>
+              <v-chip v-for="(skill, i) in project.technologies" :key="i" class="mr-1 mt-1">{{ skill }}</v-chip>
             </v-card-text>
           </v-card>
         </v-timeline-item>
@@ -58,5 +59,10 @@
 </template>
 
 <script lang="ts" src="@/views/Projects/Projects.ts"/>
-<style></style>
+<style>
+#description {
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+</style>
 

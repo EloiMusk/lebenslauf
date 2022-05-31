@@ -17,8 +17,8 @@
           <v-timeline-item icon="mdi-phone">
             <v-hover v-slot="{hover}" open-delay="110">
               <v-card :elevation="hover ? 4 : 2"
-                      :class="{ 'on-hover': hover }" @click="call('+41 79 9999999')">
-                +41 79 9999999
+                      :class="{ 'on-hover': hover }" @click="call('+41797495583')">
+                +41 79 749 55 83
               </v-card>
             </v-hover>
           </v-timeline-item>
