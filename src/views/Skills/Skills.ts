@@ -119,8 +119,7 @@ export default class Skills extends Vue {
                         ]
                     },
                     options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
+                        responsive: false,
                         transitions: {
                             easing: 'easeInOutQuad'
                         },
