@@ -1,8 +1,10 @@
-import { Vue } from 'vue-property-decorator';
 import moment from 'moment';
 import Component from 'vue-class-component';
+import Vue from "vue";
 
-@Component
+@Component({
+    name: "Home"
+})
 export default class Home extends Vue {
 
     private currentYear(){

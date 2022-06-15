@@ -1,7 +1,9 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 
-@Component
+@Component({
+    name: "Kontakt",
+})
 export default class Kontakt extends Vue {
     private call(number: string): void {
         window.open(`tel:${number}`);

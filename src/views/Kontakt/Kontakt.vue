@@ -52,7 +52,7 @@
   </v-container>
 </template>
 
-<script lang="ts" src="@/views/Kontakt/Kontakt.ts">
+<script lang="ts" src="./Kontakt.ts">
 </script>
 
 <style scoped>

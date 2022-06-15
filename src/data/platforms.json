@@ -1,0 +1,61 @@
+[
+  {
+    "name": "TryHackMe",
+    "description": "TryHackMe ist eine Online Lernplattform mit dem Fokus auf Red und Blue Team hacking.",
+    "url": "https://tryhackme.com/",
+    "auszeichnungen": [
+      {
+        "name": "Pre Security Learning Path",
+        "date": "16.03.2022",
+        "image": "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-DBW3HLDDAI.png"
+      }
+    ],
+    "badges": [
+      {
+        "name": "Blue",
+        "url": "https://tryhackme.com/MagicToast/badges/blue",
+        "image": "https://tryhackme.com/img/badges/blue.svg"
+      },
+      {
+        "name": "Networking Nerd",
+        "url": "https://tryhackme.com/MagicToast/badges/network-fundamentals",
+        "image": "https://tryhackme.com/img/badges/networkfundamentals.svg"
+      },
+      {
+        "name": "World Wide Web",
+        "url": "https://tryhackme.com/MagicToast/badges/world-wide-web",
+        "image": "https://tryhackme.com/img/badges/howthewebworks.svg"
+      },
+      {
+        "name": "cat linux.txt",
+        "url": "https://tryhackme.com/MagicToast/badges/terminaled",
+        "image": "https://tryhackme.com/img/badges/linux.svg"
+      },
+      {
+        "name": "Intro to Web Hacking",
+        "url": "https://tryhackme.com/MagicToast/badges/intro-to-web-hacking",
+        "image": "https://tryhackme.com/img/badges/introtowebsecurity.svg"
+      },
+      {
+        "name": "Pentesting Principles",
+        "url": "https://tryhackme.com/MagicToast/badges/intro-to-pentesting",
+        "image": "https://tryhackme.com/img/badges/introtooffensivesecurity.svg"
+      },
+      {
+        "name": "Burp'ed",
+        "url": "https://tryhackme.com/MagicToast/badges/burped",
+        "image": "https://tryhackme.com/img/badges/burpsuite.svg"
+      },
+      {
+        "name": "Metasploitable",
+        "url": "https://tryhackme.com/MagicToast/badges/metasploitable",
+        "image": "https://tryhackme.com/img/badges/metasploit.svg"
+      },
+      {
+        "name": "OhSINT",
+        "url": "https://tryhackme.com/MagicToast/badges/ohsint",
+        "image": "https://tryhackme.com/img/badges/ohsint.svg"
+      }
+    ]
+  }
+]

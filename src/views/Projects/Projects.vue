@@ -58,7 +58,7 @@
   </v-container>
 </template>
 
-<script lang="ts" src="@/views/Projects/Projects.ts"/>
+<script lang="ts" src="./Projects.ts"/>
 <style>
 #description {
   line-height: 1.5;

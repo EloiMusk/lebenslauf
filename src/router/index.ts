@@ -5,6 +5,7 @@ import Skills from '@/views/Skills/Skills.vue'
 import Projects from '@/views/Projects/Projects.vue'
 import Referenzen from '@/views/Referenzen/Referenzen.vue'
 import Kontakt from "@/views/Kontakt/Kontakt.vue";
+import Auszeichnungen from "@/views/Auszeichnungen/Auszeichnungen.vue";
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes: Array<RouteConfig> = [
         path: '/kontakt',
         name: 'Kontakt',
         component: Kontakt
+    },
+    {
+        path: '/auszeichnungen',
+        name: 'Auszeichnungen',
+        component: Auszeichnungen
     }
 ]
 

@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import Component from "vue-class-component";
 
-@Component
+@Component({
+    name: "Referenzen"
+})
 export default class Referenzen extends Vue {
 
     private mail(address: string) {

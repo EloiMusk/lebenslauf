@@ -88,7 +88,7 @@
 
 </template>
 
-<script lang="ts" src="@/views/Home/Home.ts"/>
+<script lang="ts" src="./Home.ts"/>
 <style>
 .imageTumbnail {
   margin: auto;

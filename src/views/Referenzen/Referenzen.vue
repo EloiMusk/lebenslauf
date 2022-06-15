@@ -62,7 +62,7 @@
 </template>
 
 
-<script lang="ts" src="@/views/Referenzen/Referenzen.ts">
+<script lang="ts" src="./Referenzen.ts">
 </script>
 
 <style scoped>

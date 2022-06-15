@@ -79,14 +79,40 @@
     "icon": "penguin"
   },
   {
-    "name": "Young Professional: DevOps Engineer ESC Managed Services Windows Team",
-    "description": "TBD",
-    "image": "rhel.jpg",
-    "pa": "",
-    "duration": "",
+    "name": "Applikationsentwickler*in beim Nex-CC",
+    "description": "Während meiner zeit in diesem Projekt habe ich bei der Entwicklung des Interview Planning Tools mitgeholfen. Ich habe gelernt wie man eine Vue App aufbaut und wie ein Java Springboot backend gesschrieben wird. Im Projekt wurde nach scrum gearbeitet, wodurch ich mit den biweekly sprintmeetings die Scrum-Arbeitsweise gut kennen lernen konne. Die Aufträge wurden über Jira verwaltet, so habe ich auch einen einblick in die möglichkeiten von Jira erhalten.\nIch habe mich im laufe des Projektes auf die Microsoft Graph API spezialisiert und schlussendlich bei der implementierung von Kalender Events einen grossen teil geleistet.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Vue und Java gemacht.",
+    "image": "interview1.jpg",
+    "pa": "Jan Herren",
+    "duration": "01.08.2021 - 31.01.2022",
     "technologies": [
-      ""
+      "Vue",
+      "Java",
+      "Springboot",
+      "Jira",
+      "Microsoft Graph API",
+      "Typescript",
+      "Git",
+      "Scrum"
     ],
-    "icon": "https://via.placeholder.com/300x200"
+    "icon": "keyboard-outline"
+  },
+  {
+    "name": "Applikationsentwickler und Produktowner im NexCC",
+    "description": "",
+    "image": "interview2.jpg",
+    "pa": "Urs Gloggner",
+    "duration": "31.01.2022 - 31.08.2022",
+    "technologies": [
+      "Vue",
+      "Java",
+      "Springboot",
+      "Jira",
+      "Microsoft Graph API",
+      "Typescript",
+      "Git",
+      "Scrum",
+      "Projektmanagement"
+    ],
+    "icon": "shape"
   }
 ]

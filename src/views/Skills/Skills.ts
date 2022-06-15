@@ -1,4 +1,4 @@
-import {Vue} from "vue-property-decorator";
+import Vue from "vue";
 import skills from '@/data/skills.json';
 import Category from '@/models/Category';
 import Component from "vue-class-component";
@@ -58,14 +58,16 @@ Chart.register(
 );
 
 
-@Component
+@Component({
+    name: "Skills",
+})
 export default class Skills extends Vue {
-    private chartData: Array<any> = [];
+    chartData: Array<any> = [];
     private categories: Category[] = skills;
-    private charts: Array<Chart> = [];
+    charts: Array<Chart> = [];
     private headerCharts: Array<Chart> = [];
 
-    private panel = 0;
+    panel = 0;
 
     beforeMount(): void {
         this.mapChartData();
@@ -79,7 +81,7 @@ export default class Skills extends Vue {
         });
     }
 
-    private getStyle(skill: number, collection: Array<number>, index: number) {
+    getStyle(skill: number, collection: Array<number>, index: number) {
         const colSum = collection.reduce((a, b) => a + b, 0);
         const width = 100 / colSum * skill;
         const background = 'hsl(' + 330 / collection.length * index + ',83.6%, 66%, 20%)';
@@ -130,7 +132,6 @@ export default class Skills extends Vue {
                             max: 100,
                         }]
                     },
-
                     label: category.name
                 }
             }
