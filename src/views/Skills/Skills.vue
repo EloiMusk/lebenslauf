@@ -7,32 +7,16 @@
       >
         <v-expansion-panel-header>
           {{ chart.label }}
-          <v-scale-transition >
           <div id="skillBar" class="d-flex d-table-row ml-3 mr-3" v-if="i !== panel">
-
-
-
-              <v-tooltip >
-                <template v-slot:activator="{on, attrs }">
-                  <div :key="t" v-for="(skill, t) in chart.data.datasets[0].data" v-bind="attrs" v-on="on" :style="getStyle(skill, chart.data.datasets[0].data, t)" class="d-flex justify-center">
-                  <span v-if="on">{{ chart.data.labels[t] }}: {{ skill }}</span>
-                  <v-icon class="transparent--text" v-else>mdi-circle-outline</v-icon>
-                </div>
-                </template>
-              </v-tooltip>
-
-
-            <!--              <v-tooltip :key="t" v-for="(skill, t) in chart.data.datasets[0].data" top>-->
-            <!--                <template v-slot:activator="{ on, attrs }">-->
-            <!--                  <div v-bind="attrs"-->
-            <!--                  v-on="on"  :style="getStyle(skill, chart.data.datasets[0].data, t)" class="d-flex justify-center">-->
-            <!--                    <v-icon class="transparent&#45;&#45;text">mdi-star</v-icon>-->
-            <!--                  </div>-->
-            <!--                </template>-->
-            <!--                <span>{{ chart.data.labels[t] }}: {{skill}}</span>-->
-            <!--              </v-tooltip>-->
+            <v-hover :key="t" v-for="(skill, t) in chart.data.datasets[0].data" v-slot="{hover}">
+              <div :style="getStyle(skill, chart.data.datasets[0].data, t)" class="d-flex justify-center">
+                <v-scale-transition hide-on-leave>
+                  <span v-if="hover">{{ chart.data.labels[t] }}: {{ skill }}</span>
+                  <v-icon v-else class="transparent--text">mdi-circle-outline</v-icon>
+                </v-scale-transition>
+              </div>
+            </v-hover>
           </div>
-          </v-scale-transition>
         </v-expansion-panel-header>
         <v-expansion-panel-content :eager="true">
           <canvas class="chart-canvas" ref="chart"></canvas>

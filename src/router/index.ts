@@ -22,7 +22,7 @@ const routes: Array<RouteConfig> = [
     },
     {
         path: '/projekte',
-        name: 'Projects',
+        name: 'Projekte',
         component: Projects
     },
     {

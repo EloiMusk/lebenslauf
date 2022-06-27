@@ -8,7 +8,7 @@
     "technologies": [
       "Guidelines",
       "Swisscom",
-      "Arbeten im Team"
+      "Arbeiten im Team"
     ],
     "icon": "foot-print"
   },
@@ -27,7 +27,7 @@
   },
   {
     "name": "PHP / Javascript für Directory Dienste (xml to LDAP)",
-    "description": "In diesem Projekt habe ich ein Tool entwickelt, welches den Namen eines Anrufers aus eine Datenbank abfragt und diesen dann auf dem Telefon des Angerufenen anzeigt.\n\nIch habe eigenständig gelernt mit PHP zu arbeiten:\n- Logging Funktion in Lokale Files\n- Externe LDAP Abfragen\n- Configurationsfunktion mit Config Files\n- Testmethoden entwickelt\n- Inbetriebnahme PHP auf IIS\n- Rufnummer Normalisierung\n- Fehlerbehandlung\n- Dokumentation im Programm Code\n\nIch habe während des Projektes gelernt, wie ich eine Datenbank über LDAP einbinden kann:\n- Verbindungsaufbau\n- Authentifizierung\n- Abfragen mit spezifischen Suchfiltern\n- Antwortauswertung\n\nApplikationsprojekt nach IPERKA planen und durchführen:\n- Über LDAP informiert\n- Für PHP Entschieden\n- Schema gezeichnet",
+    "description": "In diesem Projekt habe ich ein Tool entwickelt, welches den Namen eines Anrufers aus eine Datenbank abfragt und diesen dann auf dem Telefon des Angerufenen anzeigt.\n\nIch habe eigenständig gelernt mit PHP zu arbeiten:\n- Logging Funktion in Lokale Files\n- Externe LDAP Abfragen\n- Konfigurationsfunktion mit Config Files\n- Testmethoden entwickelt\n- Inbetriebnahme PHP auf IIS\n- Rufnummer Normalisierung\n- Fehlerbehandlung\n- Dokumentation im Programm Code\n\nIch habe während des Projektes gelernt, wie ich eine Datenbank über LDAP einbinden kann:\n- Verbindungsaufbau\n- Authentifizierung\n- Abfragen mit spezifischen Suchfiltern\n- Antwortauswertung\n\nApplikationsprojekt nach IPERKA planen und durchführen:\n- Über LDAP informiert\n- Für PHP Entschieden\n- Schema gezeichnet",
     "image": "ldap.jpg",
     "pa": "Andreas Raschle",
     "duration": "01.03.2020 - 12.04.2020",
@@ -60,7 +60,7 @@
   },
   {
     "name": "Young Professional: DevOps Engineer ESC Managed Services Linux Team",
-    "description": "In diesem Projekt habe ich alle möglichen aufgaben rund um Linuxserver einrchten bis zu Linux Server Monitoren gelernt.\nWährend des Projektes habe ich ein Script überarbeitet welches die Grundkonfigurationen eines RHEL Servers unserer Umgebung entsprechend setzt.Des weiteren habe ich eine Monitoring Lösung für die logs implementiert und die Implementation dementsprechend dokumentiert.Als Hauptaufgabe habe ich ein POC für den Microsoft ATP auf linux durchgeführt und dem Team vorgestellt.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Linux gemacht.",
+    "description": "In diesem Projekt habe ich alle möglichen aufgaben rund um Linuxserver einrichten bis zu Linux Server Monitoren gelernt.\nWährend des Projektes habe ich ein Script überarbeitet welches die Grundkonfigurationen eines RHEL Servers unserer Umgebung entsprechend setzt.Des weiteren habe ich eine Monitoring Lösung für die logs implementiert und die Implementation dementsprechend dokumentiert.Als Hauptaufgabe habe ich ein POC für den Microsoft ATP auf linux durchgeführt und dem Team vorgestellt.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Linux gemacht.",
     "image": "rhel.jpg",
     "pa": "Giancarlo Morena",
     "duration": "04.01.2021 - 30.07.2021",
@@ -72,7 +72,7 @@
       "Docker",
       "Dokumentation",
       "Git (Gitlab)",
-      "CI-Piplines",
+      "CI-Pipelines",
       "Microsoft Defender ATP",
       "Grafana"
     ],
@@ -80,7 +80,7 @@
   },
   {
     "name": "Applikationsentwickler*in beim Nex-CC",
-    "description": "Während meiner zeit in diesem Projekt habe ich bei der Entwicklung des Interview Planning Tools mitgeholfen. Ich habe gelernt wie man eine Vue App aufbaut und wie ein Java Springboot backend gesschrieben wird. Im Projekt wurde nach scrum gearbeitet, wodurch ich mit den biweekly sprintmeetings die Scrum-Arbeitsweise gut kennen lernen konne. Die Aufträge wurden über Jira verwaltet, so habe ich auch einen einblick in die möglichkeiten von Jira erhalten.\nIch habe mich im laufe des Projektes auf die Microsoft Graph API spezialisiert und schlussendlich bei der implementierung von Kalender Events einen grossen teil geleistet.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Vue und Java gemacht.",
+    "description": "Während meiner zeit in diesem Projekt habe ich bei der Entwicklung des Interview Planning Tools mitgeholfen. Ich habe gelernt wie man eine Vue App aufbaut und wie ein Java Springboot backend geschrieben wird. Im Projekt wurde nach scrum gearbeitet, wodurch ich mit den biweekly sprint meetings die Scrum-Arbeitsweise gut kennen lernen konnte. Die Aufträge wurden über Jira verwaltet, so habe ich auch einen einblick in die möglichkeiten von Jira erhalten.\nIch habe mich im laufe des Projektes auf die Microsoft Graph API spezialisiert und schlussendlich bei der implementierung von Kalender Events einen grossen teil geleistet.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Vue und Java gemacht.",
     "image": "interview1.jpg",
     "pa": "Jan Herren",
     "duration": "01.08.2021 - 31.01.2022",
@@ -97,7 +97,7 @@
     "icon": "keyboard-outline"
   },
   {
-    "name": "Applikationsentwickler und Produktowner im NexCC",
+    "name": "Applikationsentwickler und Produkt Owner im NexCC",
     "description": "",
     "image": "interview2.jpg",
     "pa": "Urs Gloggner",

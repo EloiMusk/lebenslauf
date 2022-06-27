@@ -12,4 +12,8 @@ export default class Kontakt extends Vue {
     private mail(email: string): void {
         window.open(`mailto:${email}`);
     }
+
+    private link(url: string): void {
+        window.open(url);
+    }
 }

@@ -7,7 +7,7 @@ import Vue from "vue";
 })
 export default class Home extends Vue {
 
-    private currentYear(){
+    public get currentYear(): number {
         return moment(moment()).diff('05.08.2019', 'years');
     }
 }
