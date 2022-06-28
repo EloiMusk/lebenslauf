@@ -58,9 +58,10 @@
                 <template v-slot:default="{ hover }">
                   <v-card
                       width="200"
+                      min-height="200"
                   >
                     <v-card-text>
-                      <v-img :src="badge.image"></v-img>
+                      <v-img transition="scale-transition" :src="badge.image"></v-img>
                       <h2 class="primary--text">
                         {{ badge.name }}
                       </h2>

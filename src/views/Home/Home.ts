@@ -1,4 +1,3 @@
-import moment from 'moment';
 import Component from 'vue-class-component';
 import Vue from "vue";
 
@@ -8,6 +7,9 @@ import Vue from "vue";
 export default class Home extends Vue {
 
     public get currentYear(): number {
-        return moment(moment()).diff('05.08.2019', 'years');
+        const startDate: Date = new Date(2019, 7, 2);
+        const endDate: Date = new Date();
+        const years: number = 1+Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365));
+        return years;
     }
 }

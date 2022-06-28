@@ -1,24 +1,24 @@
 <template>
   <v-container>
     <v-card id="general" class="flex-row d-flex">
-      <v-img class="imageTumbnail" v-ripple contain src="@/assets/me.jpg" max-width="500"></v-img>
+      <v-img class="imageTumbnail" v-ripple contain src="@/assets/me.jpg" max-width="500px"></v-img>
       <v-container>
         <h1>Allgemeine Informationen</h1>
         <v-timeline dense>
           <v-timeline-item icon="mdi-card-account-details-outline">
-            <v-subheader>Elio Teuber</v-subheader>
+            <v-card-title>Elio Teuber</v-card-title>
           </v-timeline-item>
           <v-divider inset></v-divider>
           <v-timeline-item icon="mdi-clock-outline">
-            <v-subheader>Betriebsinformatiker {{ currentYear }}.Lehrjahr</v-subheader>
+            <v-card-title>Betriebsinformatiker {{ currentYear }}.Lehrjahr</v-card-title>
           </v-timeline-item>
           <v-divider inset></v-divider>
           <v-timeline-item icon="mdi-cake-variant-outline">
-            <v-subheader>20.April.2003</v-subheader>
+            <v-card-title>20.April.2003</v-card-title>
           </v-timeline-item>
           <v-divider inset></v-divider>
           <v-timeline-item icon="mdi-school-outline">
-            <v-subheader>
+            <v-card-title>
               <v-chip-group>
                 <v-chip>Montag</v-chip>
                 <v-chip>Dienstag</v-chip>
@@ -26,7 +26,7 @@
                 <v-chip color="primary">Donnerstag</v-chip>
                 <v-chip color="primary">Freitag</v-chip>
               </v-chip-group>
-            </v-subheader>
+            </v-card-title>
           </v-timeline-item>
         </v-timeline>
       </v-container>
@@ -40,10 +40,10 @@
         <h2>Ich strebe danach...</h2>
       </v-card-subtitle>
       <v-card-text class="ml-10">
-        <v-subheader>...wenn immer möglich Neues zu lernen.</v-subheader>
-        <v-subheader>...mein Bestes zu geben.</v-subheader>
-        <v-subheader>...anderen zu helfen.</v-subheader>
-        <v-subheader>...nicht aufzugeben.</v-subheader>
+        <v-card-title>...wenn immer möglich Neues zu lernen.</v-card-title>
+        <v-card-title>...mein Bestes zu geben.</v-card-title>
+        <v-card-title>...anderen zu helfen.</v-card-title>
+        <v-card-title>...nicht aufzugeben.</v-card-title>
       </v-card-text>
     </v-card>
     <v-card class="mt-5">
@@ -93,4 +93,11 @@
 .imageTumbnail {
   margin: auto;
 }
+
+@media only screen and (max-width: 1270px) {
+  .imageTumbnail {
+    display: none;
+  }
+}
+
 </style>
