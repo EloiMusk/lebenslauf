@@ -32,7 +32,6 @@ jobs:
         if: ${{ github.ref_name == 'prod' }}
         run: |
           sed -ri "s|/PUBLIC_PATH/|/|g" ./vue.config.js
-          sed -ri "s/mode: 'history'/mode: 'hash'/g" ./src/router/index.ts
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run lint
