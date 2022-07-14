@@ -32,14 +32,14 @@ jobs:
           name: build-${{ github.sha }}-${{ matrix.node-version }}
           path: dist/
   deployment:
-    name: 🎁 Deploy
+    name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: build-${{ github.sha }}16.x
+          name: build-${{ github.sha }}-16.x
           path: dist/
       - name: 🚀 Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
