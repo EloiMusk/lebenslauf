@@ -41,7 +41,7 @@ jobs:
           name: build-${{ github.sha }}-16.x
           path: dist/
       - name: 🚀 Deploy via FTP
-        if: ${{ github.ref == prod }}
+        if: ${{ github.ref == 'prod' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SRV }}
@@ -50,7 +50,7 @@ jobs:
           local_dir: dist/
           dangerous-clean-slate: true
       - name: 🚀 Deploy to GH Pages
-        if: ${{ github.ref == dev }}
+        if: ${{ github.ref == 'dev' }}
         uses: JamesIves/github-pages-deploy-action@v4.3.4
         with:
           branch: gh-pages
