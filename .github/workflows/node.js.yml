@@ -23,10 +23,15 @@ jobs:
           cache: 'npm'
       - name: Get env
         run: echo "repo_name=$(echo ${{ github.repository }} | cut -d'/' -f2)" >> $GITHUB_ENV
-      - name: 📝 Prep Files
+      - name: 📝 Prep Files for Dev
         if: ${{ github.ref_name == 'dev' }}
         run: |
           sed -ri "s|PUBLIC_PATH|${{ env.repo_name }}|g" ./vue.config.js
+          sed -ri "s/mode: 'history'/mode: 'hash'/g" ./src/router/index.ts
+      - name: 📝 Prep Files for Prod
+        if: ${{ github.ref_name == 'prod' }}
+        run: |
+          sed -ri "s|/PUBLIC_PATH/|/|g" ./vue.config.js
           sed -ri "s/mode: 'history'/mode: 'hash'/g" ./src/router/index.ts
       - run: npm ci
       - run: npm run build --if-present
