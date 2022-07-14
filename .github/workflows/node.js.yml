@@ -33,6 +33,7 @@ jobs:
           path: dist/
   deployment:
     name: 🎁 Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
