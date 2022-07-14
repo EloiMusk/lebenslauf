@@ -2,7 +2,7 @@
   <v-container>
     <v-card>
       <v-card-title>
-        Elio Teuber, GHR-OSA-NEX
+        Elio Teuber, GHR-OSA-NEX-27
       </v-card-title>
       <v-card-text>
         <v-timeline align-top dense>
