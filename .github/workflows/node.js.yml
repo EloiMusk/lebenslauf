@@ -1,16 +1,14 @@
-name: 🔍 Test / 🎁 Build / 🚀 Deploy
+name: 🧪 Test / 🎁 Build / 🚀 Deploy
 
 on:
   push:
-    branches: [ "prod" ]
+    branches: [ "prod", "dev" ]
 
 jobs:
   build:
     name: 🎁 Build
     runs-on: ubuntu-latest
-    environment:
-      name: prod
-      url: https://github.com
+    concurrency: ci-${{ github.ref }}
 
     strategy:
       matrix:
@@ -23,6 +21,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - name: Get env
+        run: echo "repo_name=$(echo ${{ github.repository }} | cut -d'/' -f2)" >> $GITHUB_ENV
+      - name: 📝 Prep Files
+        if: ${{ github.ref_name == 'dev' }}
+        run: |
+          sed -ri "s|PUBLIC_PATH|${{ env.repo_name }}|g" ./vue.config.js
+          sed -ri "s/mode: 'history'/mode: 'hash'/g" ./src/router/index.ts
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run lint
@@ -31,23 +36,37 @@ jobs:
         with:
           name: build-${{ github.sha }}-${{ matrix.node-version }}
           path: dist/
+
   deployment:
     name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name }}
     steps:
-      - name: Download artifacts
+      - uses: actions/checkout@v3
+
+      - name: 📂 Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: build-${{ github.sha }}-16.x
           path: dist/
+
       - name: 🚀 Deploy via FTP
+        if: ${{ github.ref_name == 'prod' }}
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.ftp_server }}
+          server: ${{ secrets.FTP_SRV }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local_dir: dist/
           dangerous-clean-slate: true
+
+      - name: 🚀 Deploy to GH Pages
+        if: ${{ github.ref_name == 'dev' }}
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        with:
+          branch: gh-pages
+          folder: dist/
 
 
