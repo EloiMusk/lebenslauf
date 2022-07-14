@@ -44,7 +44,7 @@ jobs:
         if: ${{ github.ref }} == prod
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.ftp_server }}
+          server: ${{ secrets.FTP_SRV }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local_dir: dist/
