@@ -29,11 +29,23 @@ jobs:
         with:
           name: build-${{ github.sha }}-${{ matrix.node-version }}
           path: dist/
+      - name: Branch Check
+        id: branch_check
+        run: |
+          echo "Running on branch ${{ github.ref }}"
+          if [ "${{ github.ref_name }}" = "prod" ]; then
+            echo "::set-output name=env_name::prod"
+          elif [ "${{ github.ref_name }}" = "dev" ]; then
+            echo "::set-output name=env_name::github-pages" 
+          fi
+    outputs:
+      env_name: ${{ steps.branch_check.outputs.env_name }}
   deployment:
     name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
-    environment: prod
+    environment:
+      name: ${{ needs.build.outputs.env_name }}
     steps:
       - uses: actions/checkout@v3
       - name: 📂 Download artifacts
