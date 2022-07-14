@@ -54,8 +54,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.4
         with:
           branch: gh-pages
-          commit_message: "🤖 Deployed via action"
-          repo: ${{ github.repository }}
-          path: dist/
+          folder: dist/
 
 
