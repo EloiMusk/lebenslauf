@@ -1,16 +1,14 @@
-name: 🔍 Test / 🎁 Build / 🚀 Deploy
+name: 🧪 Test / 🎁 Build / 🚀 Deploy
 
 on:
   push:
-    branches: [ "prod" ]
+    branches: [ "prod", "dev" ]
 
 jobs:
   build:
     name: 🎁 Build
     runs-on: ubuntu-latest
-    environment:
-      name: prod
-      url: https://github.com
+    concurrency: ci-${{ github.ref }}
 
     strategy:
       matrix:
@@ -35,13 +33,15 @@ jobs:
     name: 🚀 Deploy
     needs: build
     runs-on: ubuntu-latest
+    environment: prod
     steps:
-      - name: Download artifacts
+      - name: 📂 Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: build-${{ github.sha }}-16.x
           path: dist/
       - name: 🚀 Deploy via FTP
+        if: ${{ github.ref }} == prod
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.ftp_server }}
@@ -49,5 +49,13 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local_dir: dist/
           dangerous-clean-slate: true
+      - name: 🚀 Deploy to GH Pages
+        if: ${{ github.ref }} == dev
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        with:
+          branch: gh-pages
+          commit_message: "🤖 Deployed via action"
+          repo: ${{ github.repository }}
+          path: dist/
 
 
