@@ -59,7 +59,7 @@ jobs:
           server: ${{ secrets.FTP_SRV }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local_dir: dist/
+          local-dir: dist/
           dangerous-clean-slate: true
 
       - name: 🚀 Deploy to GH Pages
