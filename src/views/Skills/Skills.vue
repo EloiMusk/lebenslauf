@@ -20,6 +20,43 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content :eager="true">
           <canvas class="chart-canvas" ref="chart"></canvas>
+          <v-tooltip color="transparent" top>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                  fab
+                  dark
+                  small
+                  v-bind="attrs"
+                  v-on="on"
+              >
+                <v-icon>mdi-information</v-icon>
+              </v-btn>
+            </template>
+            <v-card>
+              <v-card-title>Skill Punkte Skala</v-card-title>
+              <v-card-text>
+                <div class="row">
+                <span class="col-12">
+                Die punkte sind eine slebstseinschätzung auf einer skala von 0 - 100.
+                </span>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row skillGradient rounded-pill">
+                      <label class="col-4 d-flex justify-start">0</label>
+                      <label class="col-4 d-flex justify-center">50</label>
+                      <label class="col-4 d-flex justify-end">100</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-4 d-flex justify-start">Anfänger</label>
+                  <label class="col-4 d-flex justify-center">Fortgeschritten</label>
+                  <label class="col-4 d-flex justify-end">Experte</label>
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-tooltip>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -34,6 +71,10 @@
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
+}
+
+.skillGradient {
+  background: linear-gradient(to left, #00bcd4, #ff9800, #ff5722);
 }
 
 /* Extra small devices (phones, 600px and down) */
