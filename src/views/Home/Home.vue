@@ -63,6 +63,7 @@
                             Einige Projekte, welche ich in meiner Freizeit realisiert habe sind:
                         </p>
                         <ul>
+                            <li><a href="https://github.com/EloiMusk/lebenslauf">Diese Website</a></li>
                             <li><a href="https://github.com/Magistri-Codicis/spotify-playlist-generator-python">Spotify Playlist generator</a></li>
                             <li><a href="https://github.com/EloiMusk/desktop-copilot">Chat GPT Integration für Word</a></li>
                             <li><a href="https://github.com/EloiMusk/obsidian-prio-plugin">Plugin für Obsidian</a></li>
