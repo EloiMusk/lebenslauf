@@ -1,62 +1,59 @@
 [
   {
-    "name": "First Steps 2019",
-    "description": "",
-    "image": "first-steps.jpg",
-    "pa": "Stefan Gehrig",
-    "duration": "05.08.2019 - 09.08.2019",
+    "name": "Applikationsentwickler im Apps Team",
+    "description": "Im Rahmen des Projekts \"Absolviere deine IPA im Apps Team\" konnte ich wertvolle Erfahrungen sammeln und meine Fähigkeiten als Applikationsentwickler gezielt erweitern.\n\nAls Teil des Teams hatte ich die Möglichkeit, an der Entwicklung der Apps Team Webseite aktiv mitzuarbeiten. Dabei konnte ich mein Fachwissen in React, NextJS und Strapi vertiefen und praktische Erfahrungen in der Umsetzung von Webanwendungen sammeln. Durch die Zusammenarbeit mit erfahrenen Entwicklern konnte ich zudem wertvolle Einblicke in bewährte Methoden und Techniken gewinnen und mein Verständnis für Best Practices in der Softwareentwicklung vertiefen.\n\nNeben der Entwicklung der Webseite konnte ich auch meine Fähigkeiten im Projektmanagement und in der Teamarbeit stärken. Im Rahmen einer Probe-IPA hatte ich die Gelegenheit, ein eigenes Projekt zu planen, umzusetzen und zu dokumentieren. Hierbei konnte ich insbesondere meine Fähigkeiten in der strukturierten Arbeitsweise, im Zeitmanagement und im Umgang mit Stakeholdern verbessern. Zudem lernte ich, wie wichtig es ist, Ziele klar zu definieren und Fortschritte regelmässig zu überprüfen, um Projekte erfolgreich abzuschliessen.\n\nDie Teilnahme an diesem Projekt hat mich in vielerlei Hinsicht weitergebracht. Durch die aktive Mitarbeit in einem erfahrenen Entwicklungsteam konnte ich meine Kompetenzen im Bereich der Webentwicklung erweitern und mich in meinem Fachwissen und meiner Praxiserfahrung gezielt verbessern. Zudem konnte ich meine Fähigkeiten im Projektmanagement und in der Teamarbeit stärken, was sich auch in anderen Arbeitsbereichen als nützlich erweist. Durch die intensiven Erfahrungen im Projektmanagement konnte ich meine Fähigkeiten in der strukturierten Arbeitsweise, im Zeitmanagement und im Umgang mit Stakeholdern verbessern und mein Verständnis für die Anforderungen erfolgreicher Projekte vertiefen. Insgesamt war die Teilnahme an diesem Projekt eine hervorragende Gelegenheit, mich in meinem beruflichen Werdegang weiterzuentwickeln und meine Kompetenzen gezielt zu verbessern.",
+    "image": "appsteam.jpg",
+    "pa": "Carlo Schmid",
+    "duration": "06.09.2022 - 31.07.2023",
     "technologies": [
-      "Guidelines",
-      "Swisscom",
-      "Arbeiten im Team"
+      "NextJS",
+      "Strapi",
+      "Docker",
+      "Jenkins",
+      "Scrum",
+      "React",
+      "Groovy",
+      "Bash",
+      "Künstliche Intelligenz"
     ],
     "icon": "foot-print"
   },
   {
-    "name": "ICT Boot Camp im Lernenden Center XPhone",
-    "description": "In diesem Projekt habe ich die Möglichkeit gehabt, viele neue Dinge zu lernen. Ich habe mir während des Projektes ein sehr breites aber dennoch detailliertes Wissen über Netzwerke angeeignet.\nAufbau Windows Domain:\nIch bin nun in der Lage ohne fremde Hilfe eine simple Windows Domain zu erstellen und zu konfigurieren. Ausserdem habe ich nun ein Grundverständnis für die verschiedenen Dienste, welche für eine Windows Domain benötigt werden.\nDokumentation und Wissenssicherung:\nIm Verlauf des Projektes habe ich einige Dokumentationen verschiedener Art verfasst. Ich habe die verschiedenen Arten von Dokumentationen kennengelernt und habe mit Vorlagen gearbeitet. Die von mir geschriebenen Dokumentationen sind nun in Benutzung für die Ausbildung von anderen Lehrlingen in diesem Projekt.",
-    "image": "ict-bootcamp.jpg",
-    "pa": "Andreas Raschle",
-    "duration": "12.08.2019 - 28.02.2020",
+    "name": "Applikationsentwickler und Produkt Owner im NexCC",
+    "description": "Im Rahmen meines Engagements als Applikationsentwickler und Produktowner im NexCC-Projekt hatte ich die Chance, meine Fähigkeiten in den Bereichen Vue, Java, Springboot, Jira, Microsoft Graph API, Typescript, Git, Scrum und Projektmanagement gezielt zu vertiefen und meine praktischen Erfahrungen zu erweitern.\n\nIn meiner Rolle als Produkt Owner für das Interviewplanningtool habe ich mich regelmässig mit unseren Stakeholdern ausgetauscht und jeweils Sprint Planning und Review durchgeführt. Hierbei konnte ich meine Fähigkeiten in der Planung und Durchführung von Projekten gezielt stärken und mein Verständnis für die Anforderungen von Stakeholdern vertiefen. Durch meine aktive Rolle als Ansprechpartner für die Stakeholder konnte ich zudem meine Fähigkeiten in der Kommunikation und in der Zusammenarbeit mit verschiedenen Partnern verbessern.\n\nZusätzlich konnte ich meine Fähigkeiten als Projektanbieter verbessern, indem ich einen Lernenden unterstützt habe, das Interviewplanningtool weiterzuentwickeln. Hierbei konnte ich meine Erfahrung in der Softwareentwicklung gezielt weitergeben und mein Verständnis für die Bedürfnisse von Lernenden vertiefen.\n\nDurch meine Arbeit an diesem Projekt konnte ich meine Kompetenzen im Bereich der Softwareentwicklung gezielt vertiefen und mich in meinem Fachwissen und meiner Praxiserfahrung verbessern. Insbesondere konnte ich meine Fähigkeiten in Vue, Java, Springboot, Jira, Microsoft Graph API, Typescript, Git, Scrum und Projektmanagement gezielt erweitern und meine Erfahrungen in der Zusammenarbeit mit verschiedenen Partnern vertiefen.\n\nInsgesamt war die Teilnahme an diesem Projekt eine hervorragende Gelegenheit, meine Fähigkeiten als Applikationsentwickler und Produktowner gezielt zu verbessern und meine Kompetenzen im Bereich der Softwareentwicklung gezielt zu vertiefen.",
+    "image": "interview2.jpg",
+    "pa": "Urs Gloggner",
+    "duration": "31.01.2022 - 31.08.2022",
     "technologies": [
-      "Windows Domain",
-      "Dokumentation",
-      "Wissenssicherung"
-    ],
-    "icon": "wan"
-  },
-  {
-    "name": "PHP / Javascript für Directory Dienste (xml to LDAP)",
-    "description": "In diesem Projekt habe ich ein Tool entwickelt, welches den Namen eines Anrufers aus eine Datenbank abfragt und diesen dann auf dem Telefon des Angerufenen anzeigt.\n\nIch habe eigenständig gelernt mit PHP zu arbeiten:\n- Logging Funktion in Lokale Files\n- Externe LDAP Abfragen\n- Konfigurationsfunktion mit Config Files\n- Testmethoden entwickelt\n- Inbetriebnahme PHP auf IIS\n- Rufnummer Normalisierung\n- Fehlerbehandlung\n- Dokumentation im Programm Code\n\nIch habe während des Projektes gelernt, wie ich eine Datenbank über LDAP einbinden kann:\n- Verbindungsaufbau\n- Authentifizierung\n- Abfragen mit spezifischen Suchfiltern\n- Antwortauswertung\n\nApplikationsprojekt nach IPERKA planen und durchführen:\n- Über LDAP informiert\n- Für PHP Entschieden\n- Schema gezeichnet",
-    "image": "ldap.jpg",
-    "pa": "Andreas Raschle",
-    "duration": "01.03.2020 - 12.04.2020",
-    "technologies": [
-      "PHP",
-      "Javascript",
-      "LDAP",
-      "IPERKA"
-    ],
-    "icon": "phone-voip"
-  },
-  {
-    "name": "Unterstütze ein Startup bei der Entwicklung einer Blockchain Plattform",
-    "description": "In diesem Projekt habe ich eine Java Library entwickelt, welche das Testen der Aktienplattform Daura sehr vereinfacht.\nWährend des Projektes habe ich sehr viel neues Gelernt:\nDa diese Library für Testing entwickelt wurde, habe ich auch sehr viel mit manuellem testing zutun gehabt und so gelernt, was es bedeutet effizient und gründlich zu testen.\nIch habe auch gelernt wie man eine Applikation entwickelt und die Versionierung mit einem Repository wie Github im Auge behält.\nAm Schluss habe ich auch sehr viel Erfahrung mit Code Dokumentation gemacht und gelernt, wie man eine verständliche Dokumentation verfasst.\nAls Kleinen Bonus habe ich auch gelernt, wie man eine einfache Javadoc erstellt.\nAlles in allem habe ich in diesem Projekt extrem viele neue Skills erarbeitet.",
-    "image": "daura.jpg",
-    "pa": "Alexandra Sowa",
-    "duration": "02.06.2020 - 30.12.2020",
-    "technologies": [
+      "Vue",
       "Java",
-      "Javascript",
-      "Node",
-      "Selenium",
-      "Code Documentation",
+      "Springboot",
+      "Jira",
+      "Microsoft Graph API",
+      "Typescript",
       "Git",
-      "Test-Automation",
-      "Testing",
-      "Englisch"
+      "Scrum",
+      "Projektmanagement"
     ],
-    "icon": "robot-confused-outline"
+    "icon": "shape"
+  },
+  {
+    "name": "Applikationsentwickler*in beim Nex-CC",
+    "description": "Während meiner zeit in diesem Projekt habe ich bei der Entwicklung des Interview Planning Tools mitgeholfen. Ich habe gelernt wie man eine Vue App aufbaut und wie ein Java Springboot backend geschrieben wird. Im Projekt wurde nach scrum gearbeitet, wodurch ich mit den biweekly sprint meetings die Scrum-Arbeitsweise gut kennen lernen konnte. Die Aufträge wurden über Jira verwaltet, so habe ich auch einen einblick in die möglichkeiten von Jira erhalten.\nIch habe mich im laufe des Projektes auf die Microsoft Graph API spezialisiert und schlussendlich bei der implementierung von Kalender Events einen grossen teil geleistet.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Vue und Java gemacht.",
+    "image": "interview1.jpg",
+    "pa": "Jan Herren",
+    "duration": "01.08.2021 - 31.01.2022",
+    "technologies": [
+      "Vue",
+      "Java",
+      "Springboot",
+      "Jira",
+      "Microsoft Graph API",
+      "Typescript",
+      "Git",
+      "Scrum"
+    ],
+    "icon": "keyboard-outline"
   },
   {
     "name": "Young Professional: DevOps Engineer ESC Managed Services Linux Team",
@@ -79,40 +76,62 @@
     "icon": "penguin"
   },
   {
-    "name": "Applikationsentwickler*in beim Nex-CC",
-    "description": "Während meiner zeit in diesem Projekt habe ich bei der Entwicklung des Interview Planning Tools mitgeholfen. Ich habe gelernt wie man eine Vue App aufbaut und wie ein Java Springboot backend geschrieben wird. Im Projekt wurde nach scrum gearbeitet, wodurch ich mit den biweekly sprint meetings die Scrum-Arbeitsweise gut kennen lernen konnte. Die Aufträge wurden über Jira verwaltet, so habe ich auch einen einblick in die möglichkeiten von Jira erhalten.\nIch habe mich im laufe des Projektes auf die Microsoft Graph API spezialisiert und schlussendlich bei der implementierung von Kalender Events einen grossen teil geleistet.\nAlles in allem habe ich in diesem Projekt sehr viel erfahrung mit Vue und Java gemacht.",
-    "image": "interview1.jpg",
-    "pa": "Jan Herren",
-    "duration": "01.08.2021 - 31.01.2022",
+    "name": "Unterstütze ein Startup bei der Entwicklung einer Blockchain Plattform",
+    "description": "In diesem Projekt habe ich eine Java Library entwickelt, welche das Testen der Aktienplattform Daura sehr vereinfacht.\nWährend des Projektes habe ich sehr viel neues Gelernt:\nDa diese Library für Testing entwickelt wurde, habe ich auch sehr viel mit manuellem testing zutun gehabt und so gelernt, was es bedeutet effizient und gründlich zu testen.\nIch habe auch gelernt wie man eine Applikation entwickelt und die Versionierung mit einem Repository wie Github im Auge behält.\nAm Schluss habe ich auch sehr viel Erfahrung mit Code Dokumentation gemacht und gelernt, wie man eine verständliche Dokumentation verfasst.\nAls Kleinen Bonus habe ich auch gelernt, wie man eine einfache Javadoc erstellt.\nAlles in allem habe ich in diesem Projekt extrem viele neue Skills erarbeitet.",
+    "image": "daura.jpg",
+    "pa": "Alexandra Sowa",
+    "duration": "02.06.2020 - 30.12.2020",
     "technologies": [
-      "Vue",
       "Java",
-      "Springboot",
-      "Jira",
-      "Microsoft Graph API",
-      "Typescript",
+      "Javascript",
+      "Node",
+      "Selenium",
+      "Code Documentation",
       "Git",
-      "Scrum"
+      "Test-Automation",
+      "Testing",
+      "Englisch"
     ],
-    "icon": "keyboard-outline"
+    "icon": "robot-confused-outline"
   },
   {
-    "name": "Applikationsentwickler und Produkt Owner im NexCC",
-    "description": "",
-    "image": "interview2.jpg",
-    "pa": "Urs Gloggner",
-    "duration": "31.01.2022 - 31.08.2022",
+    "name": "PHP / Javascript für Directory Dienste (xml to LDAP)",
+    "description": "In diesem Projekt habe ich ein Tool entwickelt, welches den Namen eines Anrufers aus eine Datenbank abfragt und diesen dann auf dem Telefon des Angerufenen anzeigt.\n\nIch habe eigenständig gelernt mit PHP zu arbeiten:\n- Logging Funktion in Lokale Files\n- Externe LDAP Abfragen\n- Konfigurationsfunktion mit Config Files\n- Testmethoden entwickelt\n- Inbetriebnahme PHP auf IIS\n- Rufnummer Normalisierung\n- Fehlerbehandlung\n- Dokumentation im Programm Code\n\nIch habe während des Projektes gelernt, wie ich eine Datenbank über LDAP einbinden kann:\n- Verbindungsaufbau\n- Authentifizierung\n- Abfragen mit spezifischen Suchfiltern\n- Antwortauswertung\n\nApplikationsprojekt nach IPERKA planen und durchführen:\n- Über LDAP informiert\n- Für PHP Entschieden\n- Schema gezeichnet",
+    "image": "ldap.jpg",
+    "pa": "Andreas Raschle",
+    "duration": "01.03.2020 - 12.04.2020",
     "technologies": [
-      "Vue",
-      "Java",
-      "Springboot",
-      "Jira",
-      "Microsoft Graph API",
-      "Typescript",
-      "Git",
-      "Scrum",
-      "Projektmanagement"
+      "PHP",
+      "Javascript",
+      "LDAP",
+      "IPERKA"
     ],
-    "icon": "shape"
+    "icon": "phone-voip"
+  },
+  {
+    "name": "ICT Boot Camp im Lernenden Center XPhone",
+    "description": "In diesem Projekt habe ich die Möglichkeit gehabt, viele neue Dinge zu lernen. Ich habe mir während des Projektes ein sehr breites aber dennoch detailliertes Wissen über Netzwerke angeeignet.\nAufbau Windows Domain:\nIch bin nun in der Lage ohne fremde Hilfe eine simple Windows Domain zu erstellen und zu konfigurieren. Ausserdem habe ich nun ein Grundverständnis für die verschiedenen Dienste, welche für eine Windows Domain benötigt werden.\nDokumentation und Wissenssicherung:\nIm Verlauf des Projektes habe ich einige Dokumentationen verschiedener Art verfasst. Ich habe die verschiedenen Arten von Dokumentationen kennengelernt und habe mit Vorlagen gearbeitet. Die von mir geschriebenen Dokumentationen sind nun in Benutzung für die Ausbildung von anderen Lehrlingen in diesem Projekt.",
+    "image": "ict-bootcamp.jpg",
+    "pa": "Andreas Raschle",
+    "duration": "12.08.2019 - 28.02.2020",
+    "technologies": [
+      "Windows Domain",
+      "Dokumentation",
+      "Wissenssicherung"
+    ],
+    "icon": "wan"
+  },
+  {
+    "name": "First Steps 2019",
+    "description": "",
+    "image": "first-steps.jpg",
+    "pa": "Stefan Gehrig",
+    "duration": "05.08.2019 - 09.08.2019",
+    "technologies": [
+      "Guidelines",
+      "Swisscom",
+      "Arbeiten im Team"
+    ],
+    "icon": "foot-print"
   }
 ]

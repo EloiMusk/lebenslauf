@@ -74,7 +74,6 @@ export default class Skills extends Vue {
     }
 
     mounted(): void {
-        console.log("Ref: ", this.$refs)
         const el = this.$refs.chart as Array<any>;
         this.charts = this.chartData.map((data, i) => {
             return new Chart(el[i].getContext('2d'), data);
