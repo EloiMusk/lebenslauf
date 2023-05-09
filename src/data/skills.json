@@ -25,49 +25,33 @@
     ]
   },
   {
-    "name": "Office 365",
+    "name": "Technologien der Applikationsentwicklung",
     "skills": [
       {
-        "name": "Word",
+        "name": "HTML",
         "level": 90
       },
       {
-        "name": "PowerPoint",
-        "level": 80
+        "name": "CSS",
+        "level": 70
       },
       {
-        "name": "Excel",
+        "name": "JavaScript",
         "level": 60
       },
       {
-        "name": "Outlook",
-        "level": 50
+        "name": "TypeScript",
+        "level": 80
       },
       {
-        "name": "OneDrive",
-        "level": 40
+        "name": "PHP",
+        "level": 50
       }
     ]
   },
   {
     "name": "Webentwicklung (Frontend)",
     "skills": [
-      {
-        "name": "HTML",
-        "level": 80
-      },
-      {
-        "name": "CSS",
-        "level": 60
-      },
-      {
-        "name": "JavaScript",
-        "level": 50
-      },
-      {
-        "name": "TypeScript",
-        "level": 60
-      },
       {
         "name": "Angular",
         "level": 40
@@ -77,8 +61,12 @@
         "level": 60
       },
       {
-        "name": "PHP",
+        "name": "React",
         "level": 50
+      },
+      {
+        "name": "Next.js",
+        "level": 60
       }
     ]
   },
@@ -107,6 +95,10 @@
       },
       {
         "name": "GraphApi",
+        "level": 50
+      },
+      {
+        "name": "Strapi",
         "level": 50
       }
     ]
@@ -208,6 +200,31 @@
       {
         "name": "Network Exploitation",
         "level": 58
+      }
+    ]
+  },
+  {
+    "name": "Office 365",
+    "skills": [
+      {
+        "name": "Word",
+        "level": 90
+      },
+      {
+        "name": "PowerPoint",
+        "level": 80
+      },
+      {
+        "name": "Excel",
+        "level": 70
+      },
+      {
+        "name": "Outlook",
+        "level": 60
+      },
+      {
+        "name": "OneDrive",
+        "level": 60
       }
     ]
   }
