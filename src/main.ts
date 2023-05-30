@@ -6,8 +6,9 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+
 router.beforeEach((to, from, next) => {
-    document.title = to.name!;
+    document.title = to.name || "Elio Teuber";
     next()
 })
 
