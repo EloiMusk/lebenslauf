@@ -28,7 +28,6 @@ export default class Home extends Vue {
         cockpitService.getSingleton<HomeData>("home", 1).then((homeData: HomeData | null) => {
             if (homeData !== null) {
                 this.homeData = homeData;
-                console.log(this.homeData)
             }
         });
     }
