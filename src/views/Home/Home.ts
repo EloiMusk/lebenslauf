@@ -3,9 +3,11 @@ import Vue from "vue";
 import cockpitService from "@/services/CockpitService";
 import HomeData from "@/types/singleton/HomeData";
 import DateTimeFormat = Intl.DateTimeFormat;
+import {imageBuilder} from "@/services/ImageService";
 
 @Component({
     name: "Home",
+    methods: {imageBuilder},
     computed: {
         DateTimeFormat() {
             return DateTimeFormat

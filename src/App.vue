@@ -76,7 +76,6 @@ export default Vue.extend({
       kontakt: false
     };
   },
-
   mounted() {
     if ((window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('mode')) || localStorage.getItem('mode') === 'dark') {
       this.$vuetify.theme.dark = true;
@@ -94,8 +93,3 @@ export default Vue.extend({
   }
 });
 </script>
-<style>
-.menu_tabs{
-  min-width: 175px !important;
-}
-</style>
