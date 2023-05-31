@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Component from "vue-class-component";
 import NavigationData from "@/types/singleton/NavigationData";
-import cockpitService from "@/services/CockpitService";
-
 @Component({
     name: "App"
 })
